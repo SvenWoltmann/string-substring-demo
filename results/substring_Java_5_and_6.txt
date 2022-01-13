@@ -1,0 +1,35 @@
+original string:
+  string identity  : @1372a1a
+  string           : HappyCoders.eu
+  value[] identity : @f6a746
+  value[] class    : class [C
+  value[]          : [H, a, p, p, y, C, o, d, e, r, s, ., e, u]
+  offset           : 0
+  count            : 14
+
+substring:
+  string identity  : @1e63e3d
+  string           : Code
+  value[] identity : @f6a746
+  value[] class    : class [C
+  value[]          : [H, a, p, p, y, C, o, d, e, r, s, ., e, u]
+  offset           : 5
+  count            : 4
+
+substring appended to empty string:
+  string identity  : @1004901
+  string           : Code
+  value[] identity : @1b90b39
+  value[] class    : class [C
+  value[]          : [C, o, d, e]
+  offset           : 0
+  count            : 4
+
+substring wrapped with new string:
+  string identity  : @18fe7c3
+  string           : Code
+  value[] identity : @b8df17
+  value[] class    : class [C
+  value[]          : [C, o, d, e]
+  offset           : 0
+  count            : 4
