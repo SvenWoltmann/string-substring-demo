@@ -20,7 +20,6 @@ public class SubstringInternalsDemo {
 
     Object value = getPrivateField(string, "value");
     System.out.println("  value[] identity : " + identity(value));
-    System.out.println("  value[] class    : " + value.getClass());
 
     if (value instanceof byte[]) {
       byte[] bytes = (byte[]) value;
