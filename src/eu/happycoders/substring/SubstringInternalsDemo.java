@@ -20,16 +20,7 @@ public class SubstringInternalsDemo {
 
     Object value = getPrivateField(string, "value");
     System.out.println("  value[] identity : " + identity(value));
-
-    if (value instanceof byte[]) {
-      byte[] bytes = (byte[]) value;
-      System.out.println("  value[]          : " + Arrays.toString(bytes));
-    } else if (value instanceof char[]) {
-      char[] chars = (char[]) value;
-      System.out.println("  value[]          : " + Arrays.toString(chars));
-    } else {
-      System.out.println("  value[]          : " + value);
-    }
+    System.out.println("  value[]          : " + valueToString(value));
 
     // Java 1-6: offset + count
     Integer offset = (Integer) getPrivateField(string, "offset");
@@ -53,6 +44,18 @@ public class SubstringInternalsDemo {
 
   private static String identity(Object o) {
     return "@" + Integer.toHexString(System.identityHashCode(o));
+  }
+
+  private static String valueToString(Object value) {
+    if (value instanceof byte[]) {
+      return Arrays.toString((byte[]) value);
+    }
+
+    if (value instanceof char[]) {
+      return Arrays.toString((char[]) value);
+    }
+
+    return value.toString();
   }
 
   private static Object getPrivateField(String string, String fieldName)
